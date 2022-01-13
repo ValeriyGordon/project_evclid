@@ -837,14 +837,17 @@ html {
 
 /* media */
 
-@media (max-width: 1200px) {
+ @media (max-width: 1200px) {
 
   body {
-    min-width: 1200px;
+    min-width: 1220px;
   }
 
   .container {
-    max-width: 1200px;
+    width: 1220px;
+    padding: 0 10px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .header {
@@ -1054,12 +1057,14 @@ html {
 @media (max-width: 1024px) {
 
   body {
-    min-width: 924px;
+    min-width: 1044px;
   }
 
   .container {
-    width: 924px;
-    padding: 0;
+    width: 1044px;
+    padding: 0 10;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .header {
@@ -1311,12 +1316,12 @@ html {
 @media (max-width: 768px) {
 
   body {
-    min-width: 668px;
+    min-width: 688px;
   }
 
   .container {
-    width: 668px;
-    padding: 0;
+    width: 688px;
+    padding: 0 10;
   }
 
    .header {
@@ -1595,12 +1600,12 @@ html {
 @media (max-width: 320px) {
 
   body {
-    min-width: 290px;
+    min-width: 340px;
   }
 
   .container {
-    width: 290px;
-    padding: 0;
+    width: 340px;
+    padding: 0 10px;
   }
 
   .header {
@@ -1614,6 +1619,7 @@ html {
   .header__burger {
     display: block;
     margin-left: 0;
+    padding-top: 5px;
   }
 
   .header__nav {
@@ -1648,21 +1654,21 @@ html {
     font-size: 12px;
     line-height: 15px;
     text-align: center;
-    max-width: none;
-    padding-left: 0;
-    margin-bottom: 32px;
+    max-width: 270px;
+    padding-left: 20px;
+    margin-bottom: 35px;
   }
 
   .hero__text-block-button {
     font-size: 12px;
     line-height: 15px;
-    padding: 15px 28px;
-    margin-bottom: 86px;
+    padding: 12px 28px;
+    margin-bottom: 60px;
     margin-left: 65px;
   }
 
   .hero__slider-button {
-    top: 283px;
+    top: 274px;
     left: 110px;
   }
 
@@ -1672,7 +1678,7 @@ html {
   }
 
   .about {
-    margin-bottom: 60px;
+    margin-bottom: 61px;
   }
 
   .about__title {
@@ -1684,7 +1690,7 @@ html {
   .about__paragraph {
     font-size: 14px;
     line-height: 28px;
-    margin-bottom: 8px;
+    margin-bottom: 13px;
   }
 
   .about__features-container {
@@ -1693,7 +1699,7 @@ html {
 
   .about__col:first-child {
     width: 100%;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
   }
 
   .about__col:last-child {
@@ -1732,21 +1738,21 @@ html {
     line-height: 28px;
     color: var(--color-signal-black);
     max-width: 366px;
-    margin: 0 0 8px 0;
+    margin: 0 0 10px 0;
   }
 
   .about__features-btn {
     font-size: 12px;
     line-height: 15px;
     color: var(--color-signal-orange-bg);
-    padding: 11px 44px;
+    padding: 10px 41px;
   }
 
   .about__list-item-img {
     top: 0;
     left: 0;
     width: 64px;
-    height: 49px;
+    height: 56px;
   }
 
   .about__list-item {
@@ -1761,6 +1767,7 @@ html {
     max-width: 769px;
     padding-top: 61px;
     padding-left: 0;
+    margin-bottom: 4px;
   }
 
   .about__list-item-paragraph {
@@ -1768,7 +1775,7 @@ html {
     line-height: 28px;
     max-width: 620px;
     padding-left: 0;
-    margin-bottom: 35px;
+    margin-bottom: 0px;
   }
 
   .how {
@@ -1779,7 +1786,7 @@ html {
     font-weight: normal;
     font-size: 24px;
     line-height: 29px;
-    margin-bottom: 16px;
+    margin-bottom: 21px;
   }
 
   .how__steps-list {
@@ -1810,7 +1817,7 @@ html {
     order: 1;
     flex: 0 1 47%;
     margin-left: 0;
-    margin-bottom: 16px;
+    margin-bottom: 13px;
   }
 
   .how__subtitle {
@@ -1821,28 +1828,28 @@ html {
   }
 
   .how__img {
+    height: 158px;
     padding-top: 0;
-    max-height: 284px;
   }
 
   .how__paragraph {
     font-weight: normal;
     font-size: 14px;
     line-height: 28px;
-    margin-bottom: 16px;
+    margin-bottom: 15px;
   }
 
   .how__link {
     font-size: 12px;
     line-height: 15px;
-    padding: 11px 44px;
+    padding: 12px 44px;
   }
 
   .how__btn {
     font-size: 12px;
     line-height: 15px;
-    margin-left: 10px;
-    padding: 11px 29px;
+    margin-left: 6px;
+    padding: 11px 31px;
   }
 
   .faq {
@@ -1860,8 +1867,26 @@ html {
     font-weight: 500;
     font-size: 14px;
     line-height: 24px;
+    padding-top: 31px;
+    padding-bottom: 31px;
     padding-right: 46px;
     background-size: 30px 30px;
+  }
+
+  .faq__item:hover {
+    color: var(--color-signal-orange-bg);
+    background-image: url(../img/х-orange.png);
+    background-position: right center;
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+
+  }
+
+  .faq__item:active {
+    background-image: url(../img/х-closed.png);
+    background-position: right center;
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
   }
 
   .faq__item:nth-child(2n) {
@@ -1900,18 +1925,22 @@ html {
     order: 1;
     padding-top: 0;
     padding-right: 0;
-    margin: 0 0 33px 0;
+    padding-bottom: 15px;
+    margin: 0 0 15px 0;
+    border-bottom: 1px solid var(--color-gray-brown-bg);
   }
 
   .footer__form-title {
     font-weight: normal;
     font-size: 24px;
     line-height: 29px;
+    margin-bottom: 20px;
   }
 
   .footer__form-text-input {
     font-size: 14px;
     line-height: 32px;
+    padding: 14px 20px;
   }
 
   .footer__text {
@@ -1920,7 +1949,7 @@ html {
 
   .footer__logo {
     margin-left: 80px;
-    margin-bottom: 16px;
+    margin-bottom: 11px;
     width: 131px;
     height: 42px;
   }
@@ -1948,20 +1977,29 @@ html {
   .footer__form-textarea {
     font-size: 14px;
     line-height: 32px;
-    margin-bottom: 28px;
+    padding: 14px 20px;
+    margin-bottom: 22px;
   }
 
   .footer__form-button {
     font-size: 12px;
     line-height: 15px;
-    padding: 12px 23px;
+    padding: 12px 28px;
     margin-left: 55px;
-    margin-bottom: 11px;
+    margin-bottom: 13px;
+  }
+
+  .footer__inner {
+    position: relative;
   }
 
   .footer__form-check {
-    margin-top: 58px;
-    margin-left: -224px;
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: -233px;
+    margin-top: 0;
+    margin-left: 0;
   }
 
   .footer__form-checkbox__text {
