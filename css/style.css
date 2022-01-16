@@ -724,7 +724,7 @@ html {
   font-size: 48px;
   line-height: 59px;
   color: var(--color-light-telegrey);
-  margin-bottom: 25px;
+  margin-bottom: 27px;
 }
 
 .footer__form-text-input,
@@ -1057,12 +1057,12 @@ html {
 @media (max-width: 1024px) {
 
   body {
-    min-width: 1044px;
+    min-width: 1024px;
   }
 
   .container {
-    width: 1044px;
-    padding: 0 10;
+    width: 924px;
+    padding: 0;
     margin-left: auto;
     margin-right: auto;
   }
@@ -1277,7 +1277,7 @@ html {
   }
 
   .footer__logo {
-    margin-bottom: 16px;
+    margin-bottom: 17px;
   }
 
   .footer__list {
@@ -1295,12 +1295,12 @@ html {
 
   .footer__form {
     padding-top: 0;
-    margin: 0 0 50px 133px;
+    margin: 0 0 50px 131px;
     min-width: 540px;
   }
 
   .footer__form-textarea {
-    margin-bottom: 28px;
+    margin-bottom: 29px;
   }
 
   .footer__form-button {
@@ -1320,7 +1320,7 @@ html {
   }
 
   .container {
-    width: 688px;
+    width: 668px;
     padding: 0 10;
   }
 
@@ -1562,6 +1562,10 @@ html {
     margin: 0 0 48px 0;
   }
 
+  .footer__form-title {
+    margin-bottom: 25px;
+  }
+
   .footer__text {
     order: initial;
   }
@@ -1600,20 +1604,20 @@ html {
 @media (max-width: 320px) {
 
   body {
-    min-width: 340px;
+    min-width: 320px;
   }
 
   .container {
-    width: 340px;
-    padding: 0 10px;
+    width: 320px;
+    padding: 0 15px;
   }
 
   .header {
-    min-height: 69px;
+    min-height: 68px;
   }
 
   .header__search {
-    padding-top: 6px;
+    padding-top: 5px;
   }
 
   .header__burger {
@@ -1656,14 +1660,14 @@ html {
     text-align: center;
     max-width: 270px;
     padding-left: 20px;
-    margin-bottom: 35px;
+    margin-bottom: 34px;
   }
 
   .hero__text-block-button {
     font-size: 12px;
     line-height: 15px;
     padding: 12px 28px;
-    margin-bottom: 60px;
+    margin-bottom: 61px;
     margin-left: 65px;
   }
 
@@ -1690,7 +1694,7 @@ html {
   .about__paragraph {
     font-size: 14px;
     line-height: 28px;
-    margin-bottom: 13px;
+    margin-bottom: 14px;
   }
 
   .about__features-container {
@@ -1699,7 +1703,7 @@ html {
 
   .about__col:first-child {
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
 
   .about__col:last-child {
@@ -1757,7 +1761,7 @@ html {
 
   .about__list-item {
     border: none;
-    margin-bottom: 30px;
+    margin-bottom: 32px;
   }
 
   .about__list-item-title {
@@ -1775,23 +1779,23 @@ html {
     line-height: 28px;
     max-width: 620px;
     padding-left: 0;
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 
   .how {
-    margin-bottom: 60px;
+    margin-bottom: 61px;
   }
 
   .how__title {
     font-weight: normal;
     font-size: 24px;
     line-height: 29px;
-    margin-bottom: 21px;
+    margin-bottom: 20px;
   }
 
   .how__steps-list {
     justify-content: space-between;
-    margin-bottom: 16px;
+    margin-bottom: 15px;
   }
 
   .how__steps-item {
@@ -1804,11 +1808,6 @@ html {
     flex-direction: column;
   }
 
-  .how__paragraph {
-    max-width: none;
-    margin-bottom: 25px;
-  }
-
   .how__inner {
     order: 2;
   }
@@ -1817,7 +1816,7 @@ html {
     order: 1;
     flex: 0 1 47%;
     margin-left: 0;
-    margin-bottom: 13px;
+    margin-bottom: 11px;
   }
 
   .how__subtitle {
@@ -1828,7 +1827,7 @@ html {
   }
 
   .how__img {
-    height: 158px;
+    height: 160px;
     padding-top: 0;
   }
 
@@ -1836,7 +1835,7 @@ html {
     font-weight: normal;
     font-size: 14px;
     line-height: 28px;
-    margin-bottom: 15px;
+    margin-bottom: 16px;
   }
 
   .how__link {
@@ -1867,8 +1866,8 @@ html {
     font-weight: 500;
     font-size: 14px;
     line-height: 24px;
-    padding-top: 31px;
-    padding-bottom: 31px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     padding-right: 46px;
     background-size: 30px 30px;
   }
