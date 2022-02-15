@@ -4,12 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/apple.png">
   <link rel="manifest" href="manifest.webmanifest">
   <title>Evclid</title>
+
 </head>
 <body>
   <header class="header">
@@ -51,7 +53,7 @@
     <section class="hero">
       <h1 class="visually-hidden">Проектная организация Евклид</h1>
       <div class="container">
-        <div class="hero__container hero__container_two hero__container_three">
+        <div >
           <div class="hero__slide hero__slide_current">
             <div class="hero__text-block">
               <p class="hero__text-block-title">Проектные решения любой сложности</p>
@@ -59,6 +61,32 @@
                 уделом проектантов
               </p>
               <a href="#" class="button hero__text-block-button">Заказать расчёт</a>
+
+              <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide">
+                    <img src="img/low-angle-photo-of-balconies.jpg" alt="стена дома с зеркальными балконами">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/brown-and-blue-glass-building-.jpg" alt="зеркальная стена небоскрёба">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/apartment-apartment-building-architecture-building.jpg" alt="фотография небоскрёба на фоне голубого неба">
+                  </div>
+                  ...
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <!-- <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div> -->
+
+
+              </div>
+
             </div>
           </div>
           <div class="hero__slider-button">
@@ -115,74 +143,82 @@
       <div class="container">
         <h2 class="how__title">Как мы работаем</h2>
         <ul class="how__steps-list">
-          <li><button class="how__steps-item how__steps-item_current" type="button">1 шаг</button></li>
-          <li><button class="how__steps-item" type="button">2 шаг</button></li>
-          <li><button class="how__steps-item" type="button">3 шаг</button></li>
-          <li><button class="how__steps-item" type="button">4 шаг</button></li>
+          <li><button class="how__steps-item how__steps-item_current" type="button" data-path="one">1 шаг</button></li>
+          <li><button class="how__steps-item" type="button" data-path="two">2 шаг</button></li>
+          <li><button class="how__steps-item" type="button" data-path="three">3 шаг</button></li>
+          <li><button class="how__steps-item" type="button" data-path="four">4 шаг</button></li>
         </ul>
-        <div class="how__wrapper how__wrapper_stepone">
-          <div class="how__inner">
-            <h3 class="how__subtitle">Проводим консультацию</h3>
-            <p class="how__paragraph">Влечет за собой процесс внедрения и модернизации приоритизации разума над эмоциями. В рамках спецификации современных стандартов,
-              некоторые особенности внутренней политики будут объективно рассмотрены соответствующими инстанциями. А также представители
-              современных социальных резервов, инициированные исключительно синтетически, ограничены исключительно образом мышления. Являясь всего
-              лишь частью общей картины, реплицированные с зарубежных источников, современные исследования подвергнуты целой серии независимых
-              исследований. Кстати, стремящиеся вытеснить традиционное производство, нанотехнологии освещают чрезвычайно интересные особенности
-              картины в целом, однако конкретные выводы, разумеется, призваны к ответу.
-            </p>
-            <a class="how__link" href="#">Подробнее</a>
-            <button class="how__btn" type="button">Договор</button>
-          </div>
-          <div class="how__inner-img">
-            <img class="how__img" src="img/photo_2.jpg" width="870" height="460" alt="две пары мужских рук с карандашами, под ними лист бумаги с записями, на переднем и дальнем плане стоят ноутбуки">
-          </div>
-        </div>
-        <div class="how__wrapper how__wrapper_steptwo">
-          <div class="how__inner">
-            <h3 class="how__subtitle">Составляем смету</h3>
-            <p class="how__paragraph">Внедрения и модернизации приоритизации разума над эмоциями. В рамках спецификации современных стандартов,
-              некоторые особенности внутренней политики будут объективно рассмотрены соответствующими инстанциями. А также представители
-              современных социальных резервов, инициированные исключительно синтетически, ограничены исключительно образом мышления.
-              Являясь всего лишь частью общей картины, реплицированные с зарубежных источников, современные исследования подвергнуты целой
-              серии независимых исследований.
-            </p>
-            <a class="how__link" href="#">Подробнее</a>
-            <button class="how__btn" type="button">Договор</button>
-          </div>
-          <div class="how__inner-img">
-            <img class="how__img" src="img/photo_3.jpg" width="870" height="460" alt="мужские руки с ручкой над бумагами с запясями">
+        <div class="how__tabs how__tabs-active" data-target="one">
+          <div class="how__wrapper how__wrapper_stepone" >
+            <div class="how__inner">
+              <h3 class="how__subtitle">Проводим консультацию</h3>
+              <p class="how__paragraph">Влечет за собой процесс внедрения и модернизации приоритизации разума над эмоциями. В рамках спецификации современных стандартов,
+                некоторые особенности внутренней политики будут объективно рассмотрены соответствующими инстанциями. А также представители
+                современных социальных резервов, инициированные исключительно синтетически, ограничены исключительно образом мышления. Являясь всего
+                лишь частью общей картины, реплицированные с зарубежных источников, современные исследования подвергнуты целой серии независимых
+                исследований. Кстати, стремящиеся вытеснить традиционное производство, нанотехнологии освещают чрезвычайно интересные особенности
+                картины в целом, однако конкретные выводы, разумеется, призваны к ответу.
+              </p>
+              <a class="how__link" href="#">Подробнее</a>
+              <button class="how__btn" type="button">Договор</button>
+            </div>
+            <div class="how__inner-img">
+              <img class="how__img" src="img/photo_2.jpg" width="870" height="460" alt="две пары мужских рук с карандашами, под ними лист бумаги с записями, на переднем и дальнем плане стоят ноутбуки">
+            </div>
           </div>
         </div>
-        <div class="how__wrapper how__wrapper_stepthree">
-          <div class="how__inner">
-            <h3 class="how__subtitle">Привлекаем подрядчиков</h3>
-            <p class="how__paragraph">Идейные соображения высшего порядка, а также новая модель организационной деятельности требует анализа
-              прогресса профессионального сообщества. Высокий уровень вовлечения представителей целевой аудитории является четким
-              доказательством простого факта: высококачественный прототип будущего проекта напрямую зависит от дальнейших направлений
-              развития. Разнообразный и богатый опыт говорит нам, что новая модель организационной деятельности говорит о возможностях
-              системы массового участия. Принимая во внимание показатели успешности, постоянное информационно-пропагандистское обеспечение
-              нашей деятельности позволяет выполнить важные задания по разработке прогресса профессионального сообщества.
-            </p>
-            <a class="how__link" href="#">Подробнее</a>
-            <button class="how__btn" type="button">Договор</button>
-          </div>
-          <div class="how__inner-img">
-            <img class="how__img" src="img/photo_4.jpg" width="870" height="460" alt="вид сверху на руки печатающие на ноутбуке">
+        <div class="how__tabs" data-target="two">
+          <div class="how__wrapper how__wrapper_steptwo">
+            <div class="how__inner">
+              <h3 class="how__subtitle">Составляем смету</h3>
+              <p class="how__paragraph">Внедрения и модернизации приоритизации разума над эмоциями. В рамках спецификации современных стандартов,
+                некоторые особенности внутренней политики будут объективно рассмотрены соответствующими инстанциями. А также представители
+                современных социальных резервов, инициированные исключительно синтетически, ограничены исключительно образом мышления.
+                Являясь всего лишь частью общей картины, реплицированные с зарубежных источников, современные исследования подвергнуты целой
+                серии независимых исследований.
+              </p>
+              <a class="how__link" href="#">Подробнее</a>
+              <button class="how__btn" type="button">Договор</button>
+            </div>
+            <div class="how__inner-img">
+              <img class="how__img" src="img/photo_3.jpg" width="870" height="460" alt="мужские руки с ручкой над бумагами с запясями">
+            </div>
           </div>
         </div>
-        <div class="how__wrapper how__wrapper_stepfourth">
-          <div class="how__inner">
-            <h3 class="how__subtitle">Инспектируем все этапы работ</h3>
-            <p class="how__paragraph">Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого
-              факта: высококачественный прототип будущего проекта напрямую зависит от дальнейших направлений развития. Разнообразный и
-              богатый опыт говорит нам, что новая модель организационной деятельности говорит о возможностях системы массового участия.
-              Принимая во внимание показатели успешности, постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет.
-            </p>
-            <a class="how__link" href="#">Подробнее</a>
-            <button class="how__btn" type="button">Договор</button>
+        <div class="how__tabs" data-target="three">
+          <div class="how__wrapper how__wrapper_stepthree">
+            <div class="how__inner">
+              <h3 class="how__subtitle">Привлекаем подрядчиков</h3>
+              <p class="how__paragraph">Идейные соображения высшего порядка, а также новая модель организационной деятельности требует анализа
+                прогресса профессионального сообщества. Высокий уровень вовлечения представителей целевой аудитории является четким
+                доказательством простого факта: высококачественный прототип будущего проекта напрямую зависит от дальнейших направлений
+                развития. Разнообразный и богатый опыт говорит нам, что новая модель организационной деятельности говорит о возможностях
+                системы массового участия. Принимая во внимание показатели успешности, постоянное информационно-пропагандистское обеспечение
+                нашей деятельности позволяет выполнить важные задания по разработке прогресса профессионального сообщества.
+              </p>
+              <a class="how__link" href="#">Подробнее</a>
+              <button class="how__btn" type="button">Договор</button>
+            </div>
+            <div class="how__inner-img">
+              <img class="how__img" src="img/photo_4.jpg" width="870" height="460" alt="вид сверху на руки печатающие на ноутбуке">
+            </div>
           </div>
-          <div class="how__inner-img">
-            <img class="how__img" src="img/photo_5.jpg" width="870" height="460" alt="на столе компьютерная мышь, клавиатура, карандаши, записная книжка, очки, часы, зарядный кабель">
+        </div>
+        <div class="how__tabs" data-target="four">
+          <div class="how__wrapper how__wrapper_stepfourth">
+            <div class="how__inner">
+              <h3 class="how__subtitle">Инспектируем все этапы работ</h3>
+              <p class="how__paragraph">Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого
+                факта: высококачественный прототип будущего проекта напрямую зависит от дальнейших направлений развития. Разнообразный и
+                богатый опыт говорит нам, что новая модель организационной деятельности говорит о возможностях системы массового участия.
+                Принимая во внимание показатели успешности, постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет.
+              </p>
+              <a class="how__link" href="#">Подробнее</a>
+              <button class="how__btn" type="button">Договор</button>
+            </div>
+            <div class="how__inner-img">
+              <img class="how__img" src="img/photo_5.jpg" width="870" height="460" alt="на столе компьютерная мышь, клавиатура, карандаши, записная книжка, очки, часы, зарядный кабель">
+            </div>
           </div>
         </div>
       </div>
@@ -278,5 +314,8 @@
       </div>
     </div>
   </footer>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="./js/script.js"></script>
 </body>
 </html>

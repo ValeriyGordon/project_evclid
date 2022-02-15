@@ -501,10 +501,12 @@ html {
   justify-content: space-between;
 }
 
-.how__wrapper_steptwo,
-.how__wrapper_stepthree,
-.how__wrapper_stepfourth {
+.how__tabs {
   display: none;
+}
+
+.how__tabs-active {
+  display: block;
 }
 
 .how__subtitle {
