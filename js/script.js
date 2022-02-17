@@ -36,3 +36,13 @@ const swiper = new Swiper('.swiper', {
       })
     })
   })
+
+  // search
+
+  const search = document.querySelector('.header__search-form');
+
+  headerSearchForm.addEventListener('click', function (e) {
+    e.stopPropagation();
+    this.classList.add('header__search--active');
+
+  })
