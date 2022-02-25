@@ -39,10 +39,18 @@ const swiper = new Swiper('.swiper', {
 
   // search
 
-  const search = document.querySelector('.header__search-form');
+  // const search = document.querySelector('.header__search-form');
 
-  headerSearchForm.addEventListener('click', function (e) {
-    e.stopPropagation();
-    this.classList.add('header__search--active');
+  // headerSearchForm.addEventListener('click', function (e) {
+  //   e.stopPropagation();
+  //   this.classList.add('header__search--active');
 
-  })
+  // })
+
+
+  // accordion
+
+  $( function() {
+    $( "#accordion" ).accordion();
+    heightStyle: "content"
+  } );
