@@ -51,6 +51,9 @@ const swiper = new Swiper('.swiper', {
   // accordion
 
   $( function() {
-    $( "#accordion" ).accordion();
-    heightStyle: "content"
-  } );
+    $( "#accordion" ).accordion({
+      heightStyle: 'content',
+      collapsible: 'true',
+      active: false
+    });
+  });

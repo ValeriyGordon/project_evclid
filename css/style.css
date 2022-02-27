@@ -662,27 +662,6 @@ html {
   border-top: 1px solid var(--color-light-telegrey-brdr);
 }
 
-/* .faq__item-title {
-  padding-right: 1036px;
-  cursor: pointer;
-}
-
-.faq__item-title:nth-child(2n) {
-  padding-right: 782px;
-}
-
-.faq__item-title:nth-child(3n) {
-  padding-right: 888px;
-}
-
-.faq__item-title:nth-child(4n) {
-  padding-right: 615px;
-}
-
-.faq__item-title:nth-child(5n) {
-  padding-right: 953px;
-} */
-
 .faq__item-title {
   font-weight: bold;
   font-size: 24px;
@@ -690,8 +669,8 @@ html {
   color: var(--color-signal-black);
   padding-top: 39px;
   padding-bottom: 39px;
-
   background-image: url('../img/х.png');
+  background-color:transparent ;
   background-position: right center;
   background-size: 50px 50px;
   background-repeat: no-repeat;
@@ -713,6 +692,14 @@ html {
   background-repeat: no-repeat;
 }
 
+.faq__item-title:focus {
+  color: var(--color-signal-orange-bg);
+  background-image: url('../img/х-closed.png');
+  background-position: right center;
+  background-size: 50px 50px;
+  background-repeat: no-repeat;
+}
+
 .faq__item-paragraph {
   font-style: normal;
   font-weight: normal;
@@ -726,9 +713,13 @@ html {
   font-size: inherit;
 }
 
+.ui-widget-content {
+  border: none;
+}
+
 .ui-accordion .ui-accordion-header {
   margin: 0px;
-  padding: 0px;
+  padding: 39px 0px;
   font-size: 24px;
   line-height: 32px;
 }
@@ -770,9 +761,23 @@ html {
 .ui-button.ui-state-disabled:hover,
 html .ui-button.ui-state-disabled:active {
   border: none;
-  background: transparent;
+  /* background: transparent; */
 }
 
+.ui-state-default {
+  background-image: url('../img/х.png');
+  background-color: transparent;
+}
+
+.ui-accordion
+.ui-accordion-content {
+  padding: 0;
+  padding-bottom: 39px;
+}
+
+.ui-icon {
+  display: none;
+}
 
 
 /* Footer */
@@ -1150,26 +1155,6 @@ html .ui-button.ui-state-disabled:active {
     margin-bottom: 20px;
   }
 
-  /* .faq__item {
-    padding-right: 650px;
-  }
-
-  .faq__item:nth-child(2n) {
-    padding-right: 500px;
-  }
-
-  .faq__item:nth-child(3n) {
-    padding-right: 540px;
-  }
-
-  .faq__item:nth-child(4n) {
-    padding-right: 415px;
-  }
-
-  .faq__item:nth-child(5n) {
-    padding-right: 500px;
-  } */
-
   .footer__container {
     flex-direction: column;
     padding-bottom: 0;
@@ -1416,33 +1401,11 @@ html .ui-button.ui-state-disabled:active {
     line-height: 32px;
   }
 
-  .faq__item-title {
-    padding-right: 168px;
-  }
-
-  /* .faq__item {
+  .ui-accordion .ui-accordion-header {
     font-size: 20px;
     line-height: 32px;
-    padding-right: 118px;
+    padding-right: 168px;
   }
-
-  .faq__item:nth-child(2n) {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-right: 146px;
-  }
-
-  .faq__item:nth-child(3n) {
-    padding-right: 122px;
-  }
-
-  .faq__item:nth-child(4n) {
-    padding-right: 118px;
-  }
-
-  .faq__item:nth-child(5n) {
-    padding-right: 118px;
-  } */
 
   .footer__container {
     padding-top: 50px;
@@ -1709,39 +1672,11 @@ html .ui-button.ui-state-disabled:active {
     margin-bottom: 32px;
   }
 
-  .faq__item-title {
+  .ui-accordion .ui-accordion-header {
     font-size: 20px;
     line-height: 32px;
     padding-right: 98px;
   }
-
-  /* .faq__item {
-    font-size: 20px;
-    line-height: 32px;
-    padding-right: 98px;
-  }
-
-  .faq__item:nth-child(2n) {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-right: 146px;
-  }
-
-  .faq__item:nth-child(3n) {
-    padding-top: 30px;
-    padding-right: 122px;
-    padding-bottom: 30px;
-  }
-
-  .faq__item:nth-child(4n) {
-    padding-right: 98px;
-  }
-
-  .faq__item:nth-child(5n) {
-    padding-top: 30px;
-    padding-right: 98px;
-    padding-bottom: 30px;
-  } */
 
   .footer__container {
     padding-top: 50px;
@@ -2085,13 +2020,18 @@ html .ui-button.ui-state-disabled:active {
   }
 
   .faq__item-title {
+
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    background-size: 30px 30px;
+  }
+
+  .ui-accordion .ui-accordion-header {
     font-weight: 500;
     font-size: 14px;
     line-height: 24px;
-    padding-top: 30px;
-    padding-bottom: 30px;
     padding-right: 46px;
-    background-size: 30px 30px;
   }
 
   .faq__item-title:hover {
@@ -2104,6 +2044,14 @@ html .ui-button.ui-state-disabled:active {
   }
 
   .faq__item-title:active {
+    background-image: url(../img/х-closed.png);
+    background-position: right center;
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+  }
+
+  .faq__item-title:focus {
+    color: var(--color-signal-orange-bg);
     background-image: url(../img/х-closed.png);
     background-position: right center;
     background-size: 30px 30px;
