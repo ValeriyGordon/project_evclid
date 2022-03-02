@@ -38,7 +38,7 @@
           <li class="header__item"><a class="header__item-link" href="#">Отзывы</a></li>
           <li class="header__item"><a class="header__item-link" href="#">Контакты</a></li>
         </ul>
-        <a class="header__search" href="#"> <!--<span class="visually-hidden">Поиск</span> -->
+        <a class="header__search" href="#" id="header__search"> <!--<span class="visually-hidden">Поиск</span> -->
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M19.9303 10.7726C19.9303 15.5843 15.95 19.5452 10.9652 19.5452C5.98029 19.5452
             2 15.5843 2 10.7726C2 5.96089 5.98029 2 10.9652 2C15.95 2 19.9303 5.96089 19.9303 10.7726ZM17.7792 19.2132C15.908 20.6732 13.5402
@@ -46,7 +46,7 @@
             10.7726C21.9303 13.5175 20.8853 16.0227 19.1649 17.925L24 22.6752L22.6515 24L17.7792 19.2132Z" fill="#333333"/>
             </svg>
         </a>
-        <form class="header__search-form header__search--active" action="#" method="post">
+        <form id="header__search-form" class="header__search-form" action="#" method="post">
           <input class="header__search-input" name="search" type="search" required placeholder="Что будем искать?">
           <button class="header__search-button" type="submit">
             <svg class="header__search-submit" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
@@ -54,7 +54,7 @@
               <path d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z" stroke="#FF9900" stroke-width="2"/>
               </svg>
           </button>
-          <button  class="header__closed-button" type="submit">
+          <button id="header__closed-button" class="header__closed-button" type="submit">
             <svg class="header__closed-submit" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
               <rect x="8.95386" y="7.30435" width="11.6645" height="2.33291" transform="rotate(45 8.95386 7.30435)" fill="#999999"/>
               <rect x="7.30432" y="15.5524" width="11.6645" height="2.33291" transform="rotate(-45 7.30432 15.5524)" fill="#999999"/>
@@ -83,27 +83,23 @@
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                   <!-- Slides -->
-                  <div class="swiper-slide">
-                    <img src="img/low-angle-photo-of-balconies.jpg" alt="стена дома с зеркальными балконами">
+                  <div class="swiper-slide hero__container">
+                    <!-- <img src="img/low-angle-photo-of-balconies.jpg" alt="стена дома с зеркальными балконами"> -->
                   </div>
-                  <div class="swiper-slide">
-                    <img src="img/brown-and-blue-glass-building-.jpg" alt="зеркальная стена небоскрёба">
+                  <div class="swiper-slide hero__container_two">
+                    <!-- <img src="img/brown-and-blue-glass-building-.jpg" alt="зеркальная стена небоскрёба"> -->
                   </div>
-                  <div class="swiper-slide">
-                    <img src="img/apartment-apartment-building-architecture-building.jpg" alt="фотография небоскрёба на фоне голубого неба">
+                  <div class="swiper-slide hero__container_three">
+                    <!-- <img src="img/apartment-apartment-building-architecture-building.jpg" alt="фотография небоскрёба на фоне голубого неба"> -->
                   </div>
-                  ...
+                  <!-- ... -->
                 </div>
                 <!-- If we need pagination -->
                 <div class="swiper-pagination"></div>
-
                 <!-- If we need navigation buttons -->
                 <!-- <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div> -->
-
-
               </div>
-
             </div>
           </div>
           <div class="hero__slider-button">

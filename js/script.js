@@ -37,19 +37,7 @@ const swiper = new Swiper('.swiper', {
     })
   })
 
-  // search
-
-  // const search = document.querySelector('.header__search-form');
-
-  // headerSearchForm.addEventListener('click', function (e) {
-  //   e.stopPropagation();
-  //   this.classList.add('header__search--active');
-
-  // })
-
-
   // accordion
-
   $( function() {
     $( "#accordion" ).accordion({
       heightStyle: 'content',
@@ -57,3 +45,12 @@ const swiper = new Swiper('.swiper', {
       active: false
     });
   });
+
+  // search
+window.addEventListener('DOMContentLoaded', function() {
+  document.querySelector('#header__search').addEventListener('click', function(){
+    document.querySelector('#header__search-form').classList.toggle('is-active')
+  })
+})
+
+
