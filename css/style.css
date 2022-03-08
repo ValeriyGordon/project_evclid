@@ -180,11 +180,6 @@ html {
   visibility: visible;
 }
 
-.header__closed-button.de-active {
-  opacity: 0;
-  visibility: hidden;
-}
-
 .header__search-input {
   font-weight: 500;
   font-size: 18px;
@@ -248,34 +243,83 @@ html {
   margin-bottom: 7px;
 }
 
+.header__burger:hover .header__burger-line--1 {
+  background-color: var(--color-signal-orange-bg);
+  transition: background-color 0.3s ease;
+}
+
+.header__burger:hover .header__burger-line--2 {
+  width: 25px;
+  transition: width 0.25s ease, background-color 0.3s ease;
+  background-color: var(--color-signal-orange-bg);
+}
+
+.header__burger:hover .header__burger-line--3 {
+  width: 18px;
+  transition: width 0.25s ease, background-color 0.3s ease;
+  background-color: var(--color-signal-orange-bg);
+}
+
 .header__burger-line:last-child {
   margin-bottom: 0;
 }
 
 /* Hero */
 
-.hero__container {
-  background-color: var(--color-royal-blue-bg);
-  background-image: url('../img/apartment-apartment-building-architecture-building.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+.hero {
   margin-bottom: 100px;
 }
 
-.hero__container_two {
-  background-color: var(--color-royal-blue-bg);
-  background-image: url('../img/brown-and-blue-glass-building-.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
+.hero__slide {
+  position: relative;
+}
+
+.swiper {
+  z-index: -1;
+}
+
+.swiper-pagination-bullet {
+  display:inline-block;
+  width:15px;
+  height:15px;
+  border-radius:50%;
+  background: var(--color-white-bg);
+}
+
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom:30px;
+  left:0;
+  width:100%
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 10px);
+}
+
+.promo__slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero__slide1 {
+  background: url('../img/apartment-apartment-building-architecture-building.jpg') center center no-repeat;
   background-size: cover;
 }
 
-.hero__container_three {
-  background-color: var(--color-royal-blue-bg);
-  background-image: url('../img/low-angle-photo-of-balconies.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
+.hero__slide2 {
+  background: url('../img/brown-and-blue-glass-building-.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+.hero__slide3 {
+  background: url('../img/low-angle-photo-of-balconies.jpg') center center no-repeat;
   background-size: cover;
 }
 
@@ -289,8 +333,6 @@ html {
   padding-left: 80px;
   margin-bottom: 17px;
 }
-
-
 
 .hero__text-block-subtitle {
   max-width: 870px;
@@ -324,29 +366,6 @@ html {
 
 .hero__text-block-button:focus {
   outline: 2px solid var(--color-shiny-orange-bg);
-}
-
-.hero__slider-button {
-  position: absolute;
-  top: 569px;
-  left: 843px;
-}
-
-.hero__slider-button-btn {
-  background-color: rgba(255, 255, 255, 0.4);
-  border-radius: 50px;
-  width: 15px;
-  height: 15px;
-  margin-right: 16px;
-  padding: 0;
-}
-
-.hero__slider-button-btn:last-child {
-  margin-right: 0;
-}
-
-.hero__slider-button-btn_active {
-  background-color: var(--color-white-bg);
 }
 
 /* About */
@@ -764,7 +783,6 @@ html {
 .ui-button.ui-state-disabled:hover,
 html .ui-button.ui-state-disabled:active {
   border: none;
-  /* background: transparent; */
 }
 
 .ui-state-default {
@@ -1221,8 +1239,11 @@ html .ui-button.ui-state-disabled:active {
   }
 
   .header__burger {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     margin-left: 0;
+    cursor: pointer;
   }
 
   .header__nav {
@@ -1239,6 +1260,54 @@ html .ui-button.ui-state-disabled:active {
   display: none;
   }
 
+  .header__list--adaptive {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: -50px;
+    padding: 162px 106px 222px 50px;
+    background-color: var(--color-white-bg);
+    z-index: 100;
+    transition: transform .3s ease-in-out;
+    transform: translateX(-100%);
+  }
+
+  .header__list--adaptive.is-active {
+    transform: none;
+  }
+
+  .header__closed__btn {
+    position: absolute;
+    top: 39px;
+    left: 50px;
+    height: 23px;
+    width: 23px;
+    background-image: url('../img/burger-closed.png');
+    cursor: pointer;
+  }
+
+  .header__closed__btn:hover {
+    position: absolute;
+    top: 39px;
+    left: 50px;
+    height: 23px;
+    width: 23px;
+    background-image: url('../img/burger-closed-hover.png');
+    cursor: pointer;
+  }
+
+  .header__item--adaptive:not(:last-child) {
+    margin-bottom: 60px;
+  }
+
+  .header__item-link--adaptive {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    padding: 0;
+  }
+
   .header__search-form {
     top: 104px;
   }
@@ -1251,7 +1320,7 @@ html .ui-button.ui-state-disabled:active {
     top: 18px;
   }
 
-  .hero__container {
+  .hero {
     margin-bottom: 80px;
   }
 
@@ -1477,8 +1546,59 @@ html .ui-button.ui-state-disabled:active {
   }
 
   .header__burger {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     margin-left: 0;
+    cursor: pointer;
+  }
+
+  .header__list--adaptive {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: -50px;
+    padding: 144px 121px 203px 50px;
+    background-color: var(--color-white-bg);
+    z-index: 100;
+    transition: transform .3s ease-in-out;
+    transform: translateX(-100%);
+  }
+
+  .header__list--adaptive.is-active {
+    transform: none;
+  }
+
+  .header__closed__btn {
+    position: absolute;
+    top: 39px;
+    left: 50px;
+    height: 23px;
+    width: 23px;
+    background-image: url('../img/burger-closed.png');
+    cursor: pointer;
+  }
+
+  .header__closed__btn:hover {
+    position: absolute;
+    top: 39px;
+    left: 50px;
+    height: 23px;
+    width: 23px;
+    background-image: url('../img/burger-closed-hover.png');
+    cursor: pointer;
+  }
+
+  .header__item--adaptive:not(:last-child) {
+    margin-bottom: 60px;
+  }
+
+  .header__item-link--adaptive {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    padding: 0;
   }
 
   .header__nav {
@@ -1489,10 +1609,6 @@ html .ui-button.ui-state-disabled:active {
     width: 150px;
     height: 48px;
     margin: 0 auto;
-  }
-
-  .header__list {
-  display: none;
   }
 
   .header__search-form {
@@ -1755,9 +1871,59 @@ html .ui-button.ui-state-disabled:active {
   }
 
   .header__burger {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     margin-left: 0;
-    padding-top: 5px;
+    cursor: pointer;
+  }
+
+  .header__list--adaptive {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: -50px;
+    padding: 78px 143px 70px 50px;
+    background-color: var(--color-white-bg);
+    z-index: 100;
+    transition: transform .3s ease-in-out;
+    transform: translateX(-100%);
+  }
+
+  .header__list--adaptive.is-active {
+    transform: none;
+  }
+
+  .header__closed__btn {
+    position: absolute;
+    top: 29px;
+    left: 50px;
+    height: 23px;
+    width: 23px;
+    background-image: url('../img/burger-closed.png');
+    cursor: pointer;
+  }
+
+  .header__closed__btn:hover {
+    position: absolute;
+    top: 29px;
+    left: 50px;
+    height: 23px;
+    width: 23px;
+    background-image: url('../img/burger-closed-hover.png');
+    cursor: pointer;
+  }
+
+  .header__item--adaptive:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  .header__item-link--adaptive {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 0;
   }
 
   .header__nav {
@@ -1768,10 +1934,6 @@ html .ui-button.ui-state-disabled:active {
     width: 110px;
     height: 35px;
     margin: 0 auto;
-  }
-
-  .header__list {
-  display: none;
   }
 
   .header__search-input {
@@ -1799,8 +1961,20 @@ html .ui-button.ui-state-disabled:active {
     right: 10px;
   }
 
-  .hero__container {
+  .hero {
     margin-bottom: 60px;
+  }
+
+  .swiper-pagination-bullet {
+    width:10px;
+    height:10px;
+  }
+
+  .swiper-horizontal>.swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    bottom:15px;
   }
 
   .hero__text-block-title {

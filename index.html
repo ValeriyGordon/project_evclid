@@ -18,25 +18,20 @@
   <header class="header">
     <div class="container">
       <nav class="header__nav">
-        <div class="header__burger">
-          <div class="header__burger-line"></div>
-          <div class="header__burger-line"></div>
-          <div class="header__burger-line"></div>
+        <div class="header__burger" id="header__burger">
+          <div class="header__burger-line header__burger-line--1"></div>
+          <div class="header__burger-line header__burger-line--2"></div>
+          <div class="header__burger-line header__burger-line--3"></div>
         </div>
 
-        <!-- <picture class="header__picture">
-          <source media="(min-width: 1024px)" srcset="img/logo-tablet.png">
-          <source media="(min-width: 768px)" srcset="img/logo-phablet.svg">
-
-        </picture> -->
-
         <img class="header__logo" src="img/Logo.png" width="224" height="72" alt="Логотип проектной организации Евклид">
-        <ul class="header__list">
-          <li class="header__item"><a class="header__item-link" href="#">О нас</a></li>
-          <li class="header__item"><a class="header__item-link" href="#">Проекты</a></li>
-          <li class="header__item"><a class="header__item-link" href="#">Этапы</a></li>
-          <li class="header__item"><a class="header__item-link" href="#">Отзывы</a></li>
-          <li class="header__item"><a class="header__item-link" href="#">Контакты</a></li>
+        <ul class="header__list header__list--adaptive" id="header__list--adaptive">
+          <button type="button" class="header__closed__btn"></button>
+          <li class="header__item header__item--adaptive"><a class="header__item-link header__item-link--adaptive" href="#">О нас</a></li>
+          <li class="header__item header__item--adaptive"><a class="header__item-link header__item-link--adaptive" href="#">Проекты</a></li>
+          <li class="header__item header__item--adaptive"><a class="header__item-link header__item-link--adaptive" href="#">Этапы</a></li>
+          <li class="header__item header__item--adaptive"><a class="header__item-link header__item-link--adaptive" href="#">Отзывы</a></li>
+          <li class="header__item header__item--adaptive"><a class="header__item-link header__item-link--adaptive" href="#">Контакты</a></li>
         </ul>
         <a class="header__search" href="#" id="header__search"> <!--<span class="visually-hidden">Поиск</span> -->
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
@@ -70,42 +65,22 @@
     <section class="hero">
       <h1 class="visually-hidden">Проектная организация Евклид</h1>
       <div class="container">
-        <div >
-          <div class="hero__slide hero__slide_current">
-            <div class="hero__text-block">
-              <p class="hero__text-block-title">Проектные решения любой сложности</p>
-              <p class="hero__text-block-subtitle">Есть над чем задуматься: базовые сценарии поведения пользователей и по сей день остаются
-                уделом проектантов
-              </p>
-              <a href="#" class="button hero__text-block-button">Заказать расчёт</a>
-
-              <div class="swiper">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                  <!-- Slides -->
-                  <div class="swiper-slide hero__container">
-                    <!-- <img src="img/low-angle-photo-of-balconies.jpg" alt="стена дома с зеркальными балконами"> -->
-                  </div>
-                  <div class="swiper-slide hero__container_two">
-                    <!-- <img src="img/brown-and-blue-glass-building-.jpg" alt="зеркальная стена небоскрёба"> -->
-                  </div>
-                  <div class="swiper-slide hero__container_three">
-                    <!-- <img src="img/apartment-apartment-building-architecture-building.jpg" alt="фотография небоскрёба на фоне голубого неба"> -->
-                  </div>
-                  <!-- ... -->
-                </div>
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
-                <!-- If we need navigation buttons -->
-                <!-- <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div> -->
-              </div>
-            </div>
+        <div class="hero__slide">
+          <div class="hero__text-block">
+            <p class="hero__text-block-title">Проектные решения любой сложности</p>
+            <p class="hero__text-block-subtitle">Есть над чем задуматься: базовые сценарии поведения пользователей и по сей день остаются
+              уделом проектантов
+            </p>
+            <a href="#" class="button hero__text-block-button">Заказать расчёт</a>
           </div>
-          <div class="hero__slider-button">
-            <button type="button" class="hero__slider-button-btn hero__slider-button-btn_active"><span class="visually-hidden">Первый слайдер</span></button>
-            <button type="button" class="hero__slider-button-btn"><span class="visually-hidden">Второй слайдер</span></button>
-            <button type="button" class="hero__slider-button-btn"><span class="visually-hidden">Третий слайдер</span></button>
+          <div class="swiper promo__slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide hero__slide1"></div>
+              <div class="swiper-slide hero__slide2"></div>
+              <div class="swiper-slide hero__slide3"></div>
+              <!-- ... -->
+            </div>
+            <div class="swiper-pagination"></div>
           </div>
         </div>
       </div>
