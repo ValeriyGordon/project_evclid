@@ -59,3 +59,42 @@ window.addEventListener('DOMContentLoaded', function() {
     document.querySelector('#header__list--adaptive').classList.toggle('is-active')
   })
 })
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   // Burger menu
+//   const burger = document.getElementById("header__burger");
+//   const list = document.querySelector(".header__list");
+
+//   function closeMenu() {
+//     burger.classList.remove("is-active");
+//     list.classList.remove("header__list--adaptive");
+//   }
+
+//   function openMenu() {
+//     burger.classList.add("is-active");
+//     list.classList.add("header__list--adaptive");
+//   }
+
+//   document.body.addEventListener("click", (e) => {
+//     const target = e.target;
+//     if (
+//       !target.closest(".header__burger") &&
+//       !target.classList.contains("header__list--adaptive")
+//     ) {
+//       closeMenu();
+//     }
+//   });
+
+//   burger.addEventListener("click", () => {
+//     if (burger.classList.contains("is-active")) {
+//       closeMenu();
+//       return;
+//     }
+
+//     openMenu();
+//   });
+
+//   window.addEventListener("resize", () => {
+//     closeMenu();
+//   });
+// })
