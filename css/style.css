@@ -212,10 +212,6 @@ html {
   padding: 0;
 }
 
-/* .header__search-button:focus {
-  outline: 2px solid var(--color-signal-orange-brdr);
-} */
-
 .header__search-submit {
   position: absolute;
   top: 18px;
@@ -232,10 +228,6 @@ html {
 .header__search-submit path:hover {
   fill: var(--color-signal-orange-bg);
 }
-
-/* .header__closed-button:focus {
-  outline: 2px solid var(--color-signal-orange-bg);
-} */
 
 .header__closed-button {
   padding: 0;
@@ -259,10 +251,21 @@ html {
 }
 
 .header__burger {
+  width: 30px;
   padding-top: 11px;
   margin: 0;
   margin-left: 30px;
   display: none;
+  z-index: 1000;
+}
+
+#burger {
+  visibility: hidden;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }
 
 .header__burger-line {
@@ -291,6 +294,28 @@ html {
 
 .header__burger-line:last-child {
   margin-bottom: 0;
+}
+
+#burger:checked ~ .header__burger > .header__burger-line--1 {
+ opacity: 0;
+}
+
+#burger:checked ~ .header__burger > .header__burger-line--2 {
+  position: absolute;
+  top: 49px;
+  left: -3px;
+  width: 30px;
+  transform: rotate(45deg);
+  transition: transform 0.2s ease;
+}
+
+#burger:checked ~ .header__burger > .header__burger-line--3 {
+  position: absolute;
+  top: 49px;
+  left: -3px;
+  width: 30px;
+  transform: rotate(-45deg);
+  transition: transform 0.2s ease;
 }
 
 /* Hero */
@@ -1322,26 +1347,6 @@ html .ui-button.ui-state-disabled:active {
     transform: none;
   }
 
-  .header__closed__btn {
-    position: absolute;
-    top: 39px;
-    left: 50px;
-    height: 23px;
-    width: 23px;
-    background-image: url('../img/burger-closed.png');
-    cursor: pointer;
-  }
-
-  .header__closed__btn:hover {
-    position: absolute;
-    top: 39px;
-    left: 50px;
-    height: 23px;
-    width: 23px;
-    background-image: url('../img/burger-closed-hover.png');
-    cursor: pointer;
-  }
-
   .header__item--adaptive:not(:last-child) {
     margin-bottom: 60px;
   }
@@ -1613,26 +1618,6 @@ html .ui-button.ui-state-disabled:active {
 
   .header__list--adaptive.is-active {
     transform: none;
-  }
-
-  .header__closed__btn {
-    position: absolute;
-    top: 39px;
-    left: 50px;
-    height: 23px;
-    width: 23px;
-    background-image: url('../img/burger-closed.png');
-    cursor: pointer;
-  }
-
-  .header__closed__btn:hover {
-    position: absolute;
-    top: 39px;
-    left: 50px;
-    height: 23px;
-    width: 23px;
-    background-image: url('../img/burger-closed-hover.png');
-    cursor: pointer;
   }
 
   .header__item--adaptive:not(:last-child) {
@@ -1924,6 +1909,16 @@ html .ui-button.ui-state-disabled:active {
     cursor: pointer;
   }
 
+  #burger:checked ~ .header__burger > .header__burger-line--2 {
+    top: 39px;
+    left: -3px;
+  }
+
+  #burger:checked ~ .header__burger > .header__burger-line--3 {
+    top: 39px;
+    left: -3px;
+  }
+
   .header__list--adaptive {
     display: block;
     position: absolute;
@@ -1938,26 +1933,6 @@ html .ui-button.ui-state-disabled:active {
 
   .header__list--adaptive.is-active {
     transform: none;
-  }
-
-  .header__closed__btn {
-    position: absolute;
-    top: 29px;
-    left: 50px;
-    height: 23px;
-    width: 23px;
-    background-image: url('../img/burger-closed.png');
-    cursor: pointer;
-  }
-
-  .header__closed__btn:hover {
-    position: absolute;
-    top: 29px;
-    left: 50px;
-    height: 23px;
-    width: 23px;
-    background-image: url('../img/burger-closed-hover.png');
-    cursor: pointer;
   }
 
   .header__item--adaptive:not(:last-child) {
@@ -1983,28 +1958,30 @@ html .ui-button.ui-state-disabled:active {
   }
 
   .header__search-input {
-    min-width: 289px;
-    top: 70px;
+    position: absolute;
+    min-width: 320px;
+    top: -75px;
+    left: -301px;
     font-size: 12px;
     line-height: 15px;
-    padding: 10px 0 13px 32px;
-    border-radius: 10px;
+    padding: 21px 0 33px 15px;
+    border-radius: 0;
   }
 
   .header__search-input::placeholder {
     padding-bottom: 5px;
     border-bottom: 1px solid var(--color-gainsborough);
-    width: 180px;
+    width: 221px;
   }
 
   .header__search-submit {
-    top: 5px;
-    right: 47px;
+    top: -56px;
+    right: 44px;
   }
 
   .header__closed-submit {
-    top: 5px;
-    right: 10px;
+    top: -56px;
+    right: 0;
   }
 
   .hero {
