@@ -19,7 +19,7 @@
     <div class="container">
       <nav class="header__nav">
         <input id="burger" type="checkbox">
-        <label class="header__burger" id="header__burger" for="burger">
+        <label role="button" aria-label="Бургер меню" class="header__burger" id="header__burger" for="burger">
           <div class="header__burger-line header__burger-line--1"></div>
           <div class="header__burger-line header__burger-line--2"></div>
           <div class="header__burger-line header__burger-line--3"></div>
@@ -33,17 +33,17 @@
           <li class="header__item header__item--adaptive"><a class="header__item-link header__item-link--adaptive" href="http://19841984.tilda.ws/1984">Отзывы</a></li>
           <li class="header__item header__item--adaptive"><a class="header__item-link header__item-link--adaptive" href="http://19841984.tilda.ws/1984">Контакты</a></li>
         </ul>
-        <a class="header__search" href="#" id="header__search"> <!--<span class="visually-hidden">Поиск</span> -->
+        <button aria-label="Поиск" class="header__search" href="#" id="header__search">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M19.9303 10.7726C19.9303 15.5843 15.95 19.5452 10.9652 19.5452C5.98029 19.5452
             2 15.5843 2 10.7726C2 5.96089 5.98029 2 10.9652 2C15.95 2 19.9303 5.96089 19.9303 10.7726ZM17.7792 19.2132C15.908 20.6732 13.5402
             21.5452 10.9652 21.5452C4.90927 21.5452 0 16.7222 0 10.7726C0 4.82306 4.90927 0 10.9652 0C17.021 0 21.9303 4.82306 21.9303
             10.7726C21.9303 13.5175 20.8853 16.0227 19.1649 17.925L24 22.6752L22.6515 24L17.7792 19.2132Z" fill="#333333"/>
             </svg>
-        </a>
+        </button>
         <form id="header__search-form" class="header__search-form" action="#" method="post">
           <input class="header__search-input" name="search" type="search" required placeholder="Что будем искать?">
-          <button class="header__search-button" type="submit">
+          <button aria-label="Найти" class="header__search-button" type="submit"> <span class="visually-hidden">Найти</span>
             <svg class="header__search-submit" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M19.9303 10.7726C19.9303 15.5843 15.95 19.5452 10.9652 19.5452C5.98029 19.5452
               2 15.5843 2 10.7726C2 5.96089 5.98029 2 10.9652 2C15.95 2 19.9303 5.96089 19.9303 10.7726ZM17.7792 19.2132C15.908 20.6732 13.5402
@@ -51,7 +51,7 @@
               10.7726C21.9303 13.5175 20.8853 16.0227 19.1649 17.925L24 22.6752L22.6515 24L17.7792 19.2132Z" fill="#ff9900"/>
               </svg>
           </button>
-          <button id="header__closed-button" class="header__closed-button" type="submit">
+          <button aria-label="Закрыть" id="header__closed-button" class="header__closed-button" type="submit">
             <svg  class="header__closed-submit" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12C0 5.37258 5.37258 0 12 0C18.6274 0 24 5.37258 24 12ZM8.95386 7.30435L12.2531 10.6036L15.5524 7.30436L17.202 8.95397L13.9027 12.2532L17.2019 15.5524L15.5523 17.202L12.2531 13.9029L8.95394 17.202L7.30432 15.5524L10.6035 12.2532L7.30424 8.95397L8.95386 7.30435Z" fill="#999999"/>
               </svg>
@@ -131,10 +131,10 @@
       <div class="container">
         <h2 class="how__title">Как мы работаем</h2>
         <ul class="how__steps-list">
-          <li><button class="how__steps-item how__steps-item_current" type="button" data-path="one">1 шаг</button></li>
-          <li><button class="how__steps-item" type="button" data-path="two">2 шаг</button></li>
-          <li><button class="how__steps-item" type="button" data-path="three">3 шаг</button></li>
-          <li><button class="how__steps-item" type="button" data-path="four">4 шаг</button></li>
+          <li><button aria-label="Нажмите для ознакомления с первым шагом" class="how__steps-item how__steps-item_current" type="button" data-path="one">1 шаг</button></li>
+          <li><button aria-label="Нажмите для ознакомления со вторым шагом" class="how__steps-item" type="button" data-path="two">2 шаг</button></li>
+          <li><button aria-label="Нажмите для ознакомления с третьем шагом" class="how__steps-item" type="button" data-path="three">3 шаг</button></li>
+          <li><button aria-label="Нажмите для ознакомления с четвертым шагом" class="how__steps-item" type="button" data-path="four">4 шаг</button></li>
         </ul>
         <div class="how__tabs how__tabs-active" data-target="one">
           <div class="how__wrapper how__wrapper_stepone" >
@@ -147,8 +147,8 @@
                 исследований. Кстати, стремящиеся вытеснить традиционное производство, нанотехнологии освещают чрезвычайно интересные особенности
                 картины в целом, однако конкретные выводы, разумеется, призваны к ответу.
               </p>
-              <a class="how__link" href="#">Подробнее</a>
-              <button class="how__btn" type="button">Договор</button>
+              <a aria-label="Нажмите для получения подробной информацией" class="how__link" href="#">Подробнее</a>
+              <button aria-label="Нажмите для ознакомления с информацией по договору" class="how__btn" type="button">Договор</button>
             </div>
             <div class="how__inner-img">
               <img class="how__img" src="img/photo_2.jpg" width="870" height="460" alt="две пары мужских рук с карандашами, под ними лист бумаги с записями, на переднем и дальнем плане стоят ноутбуки">
