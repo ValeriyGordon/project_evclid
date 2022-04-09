@@ -1104,8 +1104,8 @@ html .ui-button.ui-state-disabled:active {
   fill: var(--color-yellow-orange);
 }
 
-.footer__social-button path:focus {
-  border: 2px solid var(--color-signal-orange-brdr);
+.footer__socials-list-item .footer__socials-list-link:focus {
+  outline: 2px solid var(--color-signal-orange-brdr);
 }
 
 .footer__form {
@@ -1144,6 +1144,11 @@ html .ui-button.ui-state-disabled:active {
 .footer__form-text-input:active,
 .footer__form-textarea:active {
   color: var(--color-white);
+}
+
+.footer__form-text-input:focus,
+.footer__form-textarea:focus {
+  outline: 2px solid var(--color-shiny-orange-bg);
 }
 
 ::-webkit-input-placeholder {
